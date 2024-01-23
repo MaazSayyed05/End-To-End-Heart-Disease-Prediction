@@ -27,7 +27,8 @@ list_of_files = [
     f'src/{project_name}/logger/__init__.py',
     f'src/{project_name}/exception/__init__.py',
     f'src/{project_name}/pipeline/__init__.py',
-    'research/trials.ipynb'
+    'research/trials.ipynb',
+    'config/config.yaml'
     
 ]
 
