@@ -20,15 +20,10 @@ End-To-End ML Project Implementation
     {
 
 		01_data_ingestion.ipynb
-		02_data_validation.ipynb
-		03_data_transformation.ipynb
-		04_model_training.ipynb
-		05_model_evaluation.ipynb
         
-    
 	}
 7. All Components Modular Code Implementation.
-8. Training Pipeline(data_ingestion, data_validaiton ,data_transformation ,model_training, model_evaluation).
+8. Training Pipeline(data_ingestion).
 9. DVC[Data Version Control](MLOPs Tool)- For Pipeline Tracking and Implementation. (Lastly we will upload)
 10. Prediction Pipeline and User App Creation (FastAPI).
 11. Docker

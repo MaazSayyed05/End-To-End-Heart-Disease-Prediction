@@ -1,0 +1,9 @@
+artifacts_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  data_url: https://drive.google.com/file/d/1ZPNgpkIGYPoUToUy4-xSDKjnLxuGo566/view?usp=drive_link  ## Add url to respective directory
+  data_file: artifacts/data_ingestion/raw_data.csv
+
+
+
