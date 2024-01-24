@@ -15,3 +15,11 @@ class DataIngestionConfig:
     data_file: Path
 
 
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    status: Path
+    data_file: Path
+    all_cols: dict
+    target_col: dict

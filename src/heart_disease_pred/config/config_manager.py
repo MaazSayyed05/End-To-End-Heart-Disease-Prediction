@@ -7,12 +7,15 @@ from heart_disease_pred.constants import *
 from heart_disease_pred.utils.commom import create_directories, read_yaml
 
 from heart_disease_pred.entity.config_entity import DataIngestionConfig
+from heart_disease_pred.entity.config_entity import DataValidationConfig
+
+import pandas as pd
 
 
 class ConfigManager:
     def __init__(
-        self, config_file_path=CONFIG_FILE_PATH, schema_file_path=SCHEMA_FILE_PATH
-    ):
+        self, config_file_path=CONFIG_FILE_PATH, schema_file_path=SCHEMA_FILE_PATH):
+
         self.config = read_yaml(config_file_path)
         self.schema = read_yaml(schema_file_path)
 
@@ -31,3 +34,21 @@ class ConfigManager:
         )
 
         return data_ingestion_config
+
+
+    def get_data_validation_config(self) -> DataValidationConfig:
+            config = self.config.data_validation
+            schema_cols = self.schema.features
+            schema_target = self.schema.target
+
+            create_directories([config.root_dir])
+
+            data_validation_config = DataValidationConfig(
+                root_dir = Path(config.root_dir),
+                status = Path(config.status),
+                data_file = Path(config.data_file),
+                all_cols = schema_cols,
+                target_col = schema_target
+            )
+
+            return data_validation_config
