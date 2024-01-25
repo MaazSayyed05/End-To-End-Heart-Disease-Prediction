@@ -9,6 +9,7 @@ from heart_disease_pred.utils.commom import create_directories, read_yaml
 from heart_disease_pred.entity.config_entity import DataIngestionConfig
 from heart_disease_pred.entity.config_entity import DataValidationConfig
 from heart_disease_pred.entity.config_entity import DataTransformationConfig
+from heart_disease_pred.entity.config_entity import ModelTrainingConfig
 
 import pandas as pd
 
@@ -71,3 +72,22 @@ class ConfigManager:
         )
 
         return data_transformation_config
+
+
+
+    def get_model_training_config(self) -> ModelTrainingConfig:
+
+        config = self.config.model_training
+        schema = self.schema
+        create_directories([config.root_dir])
+
+        model_training_config = ModelTrainingConfig(
+            root_dir = config.root_dir,
+            train_data = config.train_data,
+            test_data = config.test_data,
+            metrics = config.metrics,
+            trans_obj = config.trans_obj,
+            target_col = schema.target
+        )
+
+        return model_training_config

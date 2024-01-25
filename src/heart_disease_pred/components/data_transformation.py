@@ -54,13 +54,14 @@ class DataTransformation:
             cat_features = [col for col in train_data.columns if train_data[col].dtype == 'object']
             num_features = [col for col in train_data.columns if train_data[col].dtype != 'object']
 
+            cat_features.remove('HeartDisease')
+
             cat_categories = [
 
-            ['No' , 'Yes'], 
             ['No',  'Yes'],
             ['No' , 'Yes'],
             ['No' , 'Yes'],
-            ['No' 'Yes'],
+            ['No' , 'Yes'],
             ['Female' , 'Male'],
             ['18-24',  '25-29',  '30-34',  '35-39',  '40-44' , '45-49' , '50-54',  '55-59', '60-64',  '65-69' , '70-74',  '75-79' , '80 or older'],
             ['White' , 'Black' , 'Asian' , 'American Indian/Alaskan Native',  'Hispanic','Other'],

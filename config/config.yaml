@@ -20,3 +20,13 @@ data_transformation:
   trans_obj: artifacts/data_transformation/transform_data.pkl
   data_file: artifacts/data_ingestion/clean_data.csv
 
+
+
+model_training:
+  root_dir: artifacts/model_training
+  train_data: artifacts/data_transformation/train_data.csv
+  test_data: artifacts/data_transformation/test_data.csv
+  metrics: artifacts/model_training/metrics.json
+  trans_obj: artifacts/data_transformation/transform_data.pkl
+  
+

@@ -33,3 +33,14 @@ class DataTransformationConfig:
     trans_obj: Path
     data_file: Path
 
+
+
+@dataclass(frozen=True)
+class ModelTrainingConfig:
+    root_dir: Path
+    train_data: Path
+    test_data: Path
+    metrics: Path
+    trans_obj: Path
+    target_col: Path
+

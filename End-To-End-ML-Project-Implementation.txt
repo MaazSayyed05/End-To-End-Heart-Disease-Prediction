@@ -23,10 +23,11 @@ End-To-End ML Project Implementation
 		02_EDA_FE.ipynb
 		03_data_validation.ipynb
 		04_data_transformation.ipynb
+		04_model_training.ipynb
         
 	}
 7. All Components Modular Code Implementation.
-8. Training Pipeline( data_ingestion, EDA_FE, data_validaiton, data_transofrmation).
+8. Training Pipeline( data_ingestion, EDA_FE, data_validaiton, data_transformation, model_training ).
 9. DVC[Data Version Control](MLOPs Tool)- For Pipeline Tracking and Implementation. (Lastly we will upload)
 10. Prediction Pipeline and User App Creation (FastAPI).
 11. Docker
@@ -37,6 +38,6 @@ data_ingestion--> download zip file from url and unzip it
 data_validation--> check for all cols in shema.yaml with data and update status.txt
 data_transofrmation--> train-test split and categorical to numerical
 
-model_training--> model train for train and save scores in json format for all models
+model_training--> first transform data then model train for train and save scores in json format for all models
 
 model evaluaiton --> save best model
