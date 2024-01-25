@@ -23,3 +23,13 @@ class DataValidationConfig:
     data_file: Path
     all_cols: dict
     target_col: dict
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    train_data: Path
+    test_data: Path
+    trans_obj: Path
+    data_file: Path
+

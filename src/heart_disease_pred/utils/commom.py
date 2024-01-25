@@ -6,6 +6,7 @@ from ensure import ensure_annotations
 import yaml
 import json
 import joblib
+import pickle
 
 from box import ConfigBox
 

@@ -5,6 +5,7 @@ from heart_disease_pred.exception import CustomException
 
 from heart_disease_pred.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from heart_disease_pred.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
+from heart_disease_pred.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
 
 stage_name = "Data Ingestion"
 try:
@@ -25,6 +26,21 @@ try:
     logging.info(f">>>>>>>>>>>>>>>>> {stage_name} Started <<<<<<<<<<<<<<<<<<< ")
     data_validation = DataValidationTrainingPipeline()
     data_validation.main()
+    logging.info(f">>>>>>>>>>>>>>>>> {stage_name} Completed <<<<<<<<<<<<<<<<<<< ")
+
+except Exception as e:
+    logging.error(f">>>>>>>>>>>>>>>>> {stage_name} Failed <<<<<<<<<<<<<<<<<<< ")
+    raise CustomException(e,sys)
+
+
+
+
+
+stage_name = "Data Transformation"
+try:
+    logging.info(f">>>>>>>>>>>>>>>>> {stage_name} Started <<<<<<<<<<<<<<<<<<< ")
+    data_transformation = DataTransformationTrainingPipeline()
+    data_transformation.main()
     logging.info(f">>>>>>>>>>>>>>>>> {stage_name} Completed <<<<<<<<<<<<<<<<<<< ")
 
 except Exception as e:

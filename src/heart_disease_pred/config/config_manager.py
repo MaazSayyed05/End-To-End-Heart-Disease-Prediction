@@ -8,6 +8,7 @@ from heart_disease_pred.utils.commom import create_directories, read_yaml
 
 from heart_disease_pred.entity.config_entity import DataIngestionConfig
 from heart_disease_pred.entity.config_entity import DataValidationConfig
+from heart_disease_pred.entity.config_entity import DataTransformationConfig
 
 import pandas as pd
 
@@ -52,3 +53,21 @@ class ConfigManager:
             )
 
             return data_validation_config
+
+
+
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            train_data=config.train_data,
+            test_data=config.test_data,
+            trans_obj=config.trans_obj,
+            data_file=config.data_file
+        )
+
+        return data_transformation_config
