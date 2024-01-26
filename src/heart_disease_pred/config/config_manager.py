@@ -73,8 +73,8 @@ class ConfigManager:
 
         return data_transformation_config
 
-
-
+    
+    
     def get_model_training_config(self) -> ModelTrainingConfig:
 
         config = self.config.model_training
@@ -87,6 +87,7 @@ class ConfigManager:
             test_data = config.test_data,
             metrics = config.metrics,
             trans_obj = config.trans_obj,
+            best_model = config.best_model,
             target_col = schema.target
         )
 

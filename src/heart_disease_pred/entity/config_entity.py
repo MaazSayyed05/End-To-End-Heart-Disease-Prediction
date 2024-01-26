@@ -43,4 +43,4 @@ class ModelTrainingConfig:
     metrics: Path
     trans_obj: Path
     target_col: Path
-
+    best_model: Path

@@ -161,4 +161,5 @@ cython_debug/
 
 
 logs/*
+artifacts/model_training/best_model.pkl
 

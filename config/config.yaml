@@ -28,5 +28,6 @@ model_training:
   test_data: artifacts/data_transformation/test_data.csv
   metrics: artifacts/model_training/metrics.json
   trans_obj: artifacts/data_transformation/transform_data.pkl
+  best_model: artifacts/model_training/best_model.pkl
   
 
