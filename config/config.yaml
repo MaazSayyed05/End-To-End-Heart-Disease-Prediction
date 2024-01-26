@@ -17,7 +17,7 @@ data_transformation:
   root_dir: artifacts/data_transformation
   train_data: artifacts/data_transformation/train_data.csv
   test_data: artifacts/data_transformation/test_data.csv
-  trans_obj: artifacts/data_transformation/transform_data.pkl
+  trans_obj: artifacts/data_transformation/transform_data.pkl  ## Create transformation object
   data_file: artifacts/data_ingestion/clean_data.csv
 
 
@@ -27,7 +27,7 @@ model_training:
   train_data: artifacts/data_transformation/train_data.csv
   test_data: artifacts/data_transformation/test_data.csv
   metrics: artifacts/model_training/metrics.json
-  trans_obj: artifacts/data_transformation/transform_data.pkl
+  trans_obj: artifacts/data_transformation/transform_data.pkl ## Fit transformation object and overwrite it
   best_model: artifacts/model_training/best_model.pkl
   
 
