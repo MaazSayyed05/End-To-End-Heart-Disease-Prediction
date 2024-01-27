@@ -31,6 +31,11 @@ conda activate heart
 pip install -r requirements.txt
 ```
 
+
+```bash
+python main.py
+```
+
 ```bash
 python app.py
 ```
