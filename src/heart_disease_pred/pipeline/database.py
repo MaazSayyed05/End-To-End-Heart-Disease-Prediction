@@ -64,6 +64,7 @@ class mysqlconnect:
             # for row in mycursor :
             #     logging.info(row)
                         
+            self.mydb.commit()
 
             self.mydb.close()
 
