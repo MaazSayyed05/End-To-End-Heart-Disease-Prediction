@@ -4,6 +4,7 @@ matplotlib
 seaborn
 scikit-learn
 xgboost
+mysql-connector-python
 # pickle
 # json
 

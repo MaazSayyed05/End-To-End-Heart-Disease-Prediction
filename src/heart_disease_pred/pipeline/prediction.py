@@ -29,6 +29,7 @@ class PredictionPipeline:
             data_transform = transform_obj.transform(data)
 
             predict = model.predict(data_transform)
+            
 
             if predict == 0:
                 return 'No'

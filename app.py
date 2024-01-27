@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 
 from heart_disease_pred.pipeline.prediction import PredictionPipeline
-
+from heart_disease_pred.pipeline.database import mysqlconnect
 
 app = Flask(__name__) # initializing a flask app
 
@@ -72,6 +72,11 @@ def index():
             obj = PredictionPipeline()
             predict = obj.predict(data)
 
+            # ----------------------------------------------------------------
+            mysql_pipeline = mysqlconnect()
+            mysql_pipeline.insert_data(data,predict)
+            # ----------------------------------------------------------------
+            
             return render_template('results.html', prediction = str(predict))
 
         except Exception as e:
