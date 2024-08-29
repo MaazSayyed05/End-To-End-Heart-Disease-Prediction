@@ -24,19 +24,8 @@ def training():
 def index():
     if request.method == 'POST':
         try:
-            #  reading the inputs given by the user
-            # fixed_acidity =float(request.form['fixed_acidity'])
-            # volatile_acidity =float(request.form['volatile_acidity'])
-            # citric_acid =float(request.form['citric_acid'])
-            # residual_sugar =float(request.form['residual_sugar'])
-            # chlorides =float(request.form['chlorides'])
-            # free_sulfur_dioxide =float(request.form['free_sulfur_dioxide'])
-            # total_sulfur_dioxide =float(request.form['total_sulfur_dioxide'])
-            # density =float(request.form['density'])
-            # pH =float(request.form['pH'])
-            # sulphates =float(request.form['sulphates'])
-            # alcohol =float(request.form['alcohol'])
-            # -----------------------------------------------------
+
+            # -----------------------------------------------------------------------
 
             BMI             = float(request.form['BMI'])
             Smoking         = str(request.form['Smoking'])
@@ -56,13 +45,7 @@ def index():
             KidneyDisease   = str(request.form['KidneyDisease'])
             SkinCancer      = str(request.form['SkinCancer'])
 
-
-            # -----------------------------------------------------
-       
-         
-            # data = [fixed_acidity,volatile_acidity,citric_acid,residual_sugar,chlorides,free_sulfur_dioxide,total_sulfur_dioxide,density,pH,sulphates,alcohol]
-            
-            # ---------------------------------------------------
+            # -----------------------------------------------------------------------
 
             data = [BMI, Smoking, AlcoholDrinking, Stroke, PhysicalHealth, MentalHealth, DiffWalking, Sex, AgeCategory, Race, Diabetic, PhysicalActivity, GenHealth, SleepTime, Asthma, KidneyDisease, SkinCancer]
             data = np.array(data).reshape(1, 17)
